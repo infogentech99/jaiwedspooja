@@ -450,30 +450,14 @@ export default function Home() {
       </section>
        {/* Fourth section */}
        <section className="bg-[url('/assets/background_fourth.webp')] bg-cover bg-no-repeat">
-        <div className="h-86 md:h-182 lg:h-338 3xl:h-426 flex justify-center">
+        <div className="h-96 md:h-182 lg:h-338 3xl:h-426 flex justify-center">
           <img src="/assets/couple_name.webp" alt="couple_name" className="mt-8 w-24 h-12 md:mt-15 md:w-50 md:h-25 lg:mt-30 lg:w-80 lg:h-40 3xl:mt-40 3xl:w-105 3xl:h-60" />
         </div>
        </section>
 
        {/* Fifth section */}
-       {/* <section className="bg-[url('/assets/background_fifth.webp')] bg-cover bg-no-repeat">
-        <div className="flex flex-col items-center h-39 md:h-83 lg:h-150 3xl:h-195 gap-2 md:gap-4 lg:gap-6 3xl:gap-14">
-         <h2 className="jacques-francois text-[#FFFFFF] text-center text-xl md:text-3xl lg:text-[52px] pt-0 md:pt-12 lg:pt-32 3xl:pt-40">The countdown begins <br /> 14D 12H 28M</h2>
-         <p className="jacques-francois text-[#FFFFFF] text-center text-xs md:text-xl lg:text-[32px] px-3 md:px-25 lg:px-70 3xl:px-110">
-          Our families are excited that you are able to join us in celebrating
-          what we hope will be one of the happiest days of our lives.
-         </p>
-         <p className="jacques-francois text-[#FFFFFF] text-center text-xs md:text-xl lg:text-[32px] ">
-          Follow Invite Arc on Instagram
-         </p>
-         <p className="jacques-francois text-[#FFFFFF] text-center text-xs md:text-xl lg:text-[32px] ">
-          © Invite Arc 2026
-         </p>
-        </div>
-       </section> */}
-      
-
-      <MarriageCountdown />
+       <MarriageCountdown />
+       
       {/* <div className="fixed top-5 left-5 z-50">
         <a href="https://invitearc.com/">
           <button className="flex items-center gap-3 border-white border-2 bg-white/0 backdrop-blur text-white px-6 py-3 rounded-full shadow-lg cursor-pointer">
