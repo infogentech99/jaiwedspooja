@@ -288,7 +288,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex justify-center mt-20 lg:pt-0 pb-80 3xl:pb-120">
+          <div className="flex justify-center mt-20 lg:pt-0 pb-34 3xl:pb-120">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-28 3xl:gap-46 ">
               {events.map((event, i) => (
                 <div key={i} className="flex flex-col items-center text-center">
@@ -355,20 +355,20 @@ export default function Home() {
             you at the wedding.
           </h2>
         <div className="relative flex flex-col items-center mt-14 md:mt-16 lg:mt-20 3xl:mt-50">
-          <img src="/assets/couple_one.webp" alt="couple_one" className=" absolute lg:top-0 w-30 h-20 md:w-47 md:h-37 lg:w-108 lg:h-76 3xl:w-120 3xl:h-88 z-10" />
+          <img src="/assets/couple_one.webp" alt="couple_one" className=" absolute lg:top-0 w-30 h-25 md:w-47 md:h-37 lg:w-108 lg:h-76 3xl:w-120 3xl:h-88 z-10" />
           <div className="flex flex-col ">
-          <h2 className="flex flex-col items-center text-center text-xl md:text-4xl lg:text-[68px] ml-60 md:ml-100 lg:ml-210 3xl:ml-230 md:mt-2 3xl:mt-6">
+          <h2 className="flex flex-col items-center text-center text-xl md:text-4xl lg:text-[68px] ml-58 md:ml-100 lg:ml-210 3xl:ml-230 md:mt-2 3xl:mt-6">
           <span className="text-[#F2AD15] jacques-francois">SAMPATH</span>
-          <span className="text-[#7CE670] opacity-50 text-5xl md:text-7xl lg:text-[150px] lavishly-yours-regular -my-6 md:-my-8 lg:-my-12 md:pr-12 lg:pr-30">&</span>
-          <span className="text-[#F2AD15] jacques-francois md:pr-12 lg:pr-22">SAYALI</span>
+          <span className="text-[#7CE670] opacity-50 text-5xl md:text-7xl lg:text-[150px] lavishly-yours-regular -my-5 md:-my-8 lg:-my-12 pr-8 md:pr-12 lg:pr-30">&</span>
+          <span className="text-[#F2AD15] jacques-francois pr-7 md:pr-12 lg:pr-22">SAYALI</span>
           </h2>
           </div>
-          <img src="/assets/couple_two.webp" alt="couple_two" className="absolute top-15 left-12 w-28 h-38 md:top-25 md:left-35 md:w-50 md:h-65 
+          <img src="/assets/couple_two.webp" alt="couple_two" className="absolute top-15 left-12 w-28 h-45 md:top-25 md:left-35 md:w-50 md:h-65 
                     lg:top-50 lg:left-50 lg:w-108 lg:h-126 3xl:top-60 3xl:left-70 3xl:w-130 3xl:h-180 z-0" />
-          <img src="/assets/flowers.webp" alt="flowers" className=" w-24 h-30 md:w-40 md:h-46 lg:w-58 lg:h-96 3xl:w-90 3xl:h-118 3xl:mt-7 3xl:ml-26 z-40" />
-          <img src="/assets/couple_three.webp" alt="couple_three" className="absolute top-15 right-12 w-28 h-44 md:top-25 md:right-40 md:w-50 md:h-75 
+          <img src="/assets/flowers.webp" alt="flowers" className="ml-2 mt-2 w-24 h-30 md:w-40 md:h-46 lg:w-58 lg:h-96 3xl:w-90 3xl:h-118 3xl:mt-7 3xl:ml-26 z-40" />
+          <img src="/assets/couple_three.webp" alt="couple_three" className="absolute top-17 right-12 w-28 h-48 md:top-25 md:right-40 md:w-50 md:h-75 
                     lg:top-55 lg:right-50 lg:w-108 lg:h-146 3xl:top-60 3xl:right-65 3xl:w-140 3xl:h-200 z-20" />
-          <img src="/assets/couple_four.webp" alt="couple_four" className="mt-4 w-30 h-20 md:w-60 md:h-40 lg:w-123 lg:h-96 lg:mt-8 3xl:mt-20 3xl:w-140 3xl:h-108 3xl:mr-15 z-10" />
+          <img src="/assets/couple_four.webp" alt="couple_four" className="mt-2 w-33 h-25 md:w-60 md:h-40 lg:w-123 lg:h-96 lg:mt-8 3xl:mt-20 3xl:w-140 3xl:h-108 3xl:mr-15 z-10" />
         </div>
         <div className="lg:mt-50">
            <h1 className=" text-3xl md:text-6xl lg:text-[122px] text-center text-[#FFFFFF] md:pt-29 lg:pt-32 pt-22 jacques-francois">
@@ -451,7 +451,7 @@ export default function Home() {
        {/* Fourth section */}
        <section className="bg-[url('/assets/background_fourth.webp')] bg-cover bg-no-repeat">
         <div className="h-86 md:h-182 lg:h-338 3xl:h-426 flex justify-center">
-          <img src="/assets/couple_name.webp" alt="couple_name" className="mt-6 w-30 h-15 md:mt-15 md:w-50 md:h-25 lg:mt-30 lg:w-80 lg:h-40 3xl:mt-40 3xl:w-105 3xl:h-60" />
+          <img src="/assets/couple_name.webp" alt="couple_name" className="mt-8 w-24 h-12 md:mt-15 md:w-50 md:h-25 lg:mt-30 lg:w-80 lg:h-40 3xl:mt-40 3xl:w-105 3xl:h-60" />
         </div>
        </section>
 
