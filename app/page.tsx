@@ -343,7 +343,7 @@ export default function Home() {
       {/* Third section */}
       <section className="bg-[url('/assets/respo_third.webp')] md:bg-[url('/assets/background_third.webp')] bg-cover bg-no-repeat bg-top md:bg-center w-full overflow-hidden">
       
-       <div className="h-454 md:h-516 lg:h-957 3xl:h-1182">
+       <div className="h-470 md:h-516 lg:h-957 3xl:h-1182">
         <h1 className="text-xl md:text-2xl lg:text-[36px] text-center text-[#FFFFFF] pt-14 md:pt-22 lg:pt-40 3xl:pt-55 jacques-francois">A message from the couple</h1>
           <h2 className="text-xs md:text-xl lg:text-[32px] text-center text-[#FFFFFF] px-8 md:px-16 lg:px-53 3xl:px-100 mt-8
                          md:mt-16 lg:mt-36 jacques-francois leading-snug md:leading-6 lg:leading-8 3xl:leading-10">
