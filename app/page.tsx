@@ -2,7 +2,7 @@
 import { useEffect, useState, useRef, useMemo } from "react";
 // import FallingLamps from "@/app/components/FallingLamps";
 // import CoupleMessage from "@/app/components/CoupleMessage";
-// import MarriageCountdown from "@/app/components/MarriageCountdown";
+import MarriageCountdown from "@/app/components/MarriageCountdown";
 
 const FloatingLamp = ({ className, style, reverse = false }: { className: string; style?: React.CSSProperties; reverse?: boolean }) => {
   // Memoize random values to prevent recalculation on re-renders
@@ -289,7 +289,7 @@ export default function Home() {
           </div>
 
           <div className="flex justify-center mt-20 lg:pt-0 pb-80 3xl:pb-120">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-24 3xl:gap-30 ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-28 3xl:gap-36 ">
               {events.map((event, i) => (
                 <div key={i} className="flex flex-col items-center text-center">
                   <img
@@ -341,10 +341,10 @@ export default function Home() {
       </section>
 
       {/* Third section */}
-      <section className="bg-[url('/assets/respo_third.png')] md:bg-[url('/assets/background_third.webp')] bg-cover bg-no-repeat bg-top md:bg-center w-full overflow-hidden">
+      <section className="bg-[url('/assets/respo_third.webp')] md:bg-[url('/assets/background_third.webp')] bg-cover bg-no-repeat bg-top md:bg-center w-full overflow-hidden">
       
-       <div className="h-454 md:h-516 lg:h-957 3xl:h-1207">
-        <h1 className="text-xl md:text-2xl lg:text-[36px] text-center text-[#FFFFFF] pt-14 md:pt-22 lg:pt-40 jacques-francois">A message from the couple</h1>
+       <div className="h-454 md:h-516 lg:h-957 3xl:h-1192">
+        <h1 className="text-xl md:text-2xl lg:text-[36px] text-center text-[#FFFFFF] pt-14 md:pt-22 lg:pt-40 3xl:pt-55 jacques-francois">A message from the couple</h1>
           <h2 className="text-xs md:text-xl lg:text-[32px] text-center text-[#FFFFFF] px-8 md:px-16 lg:px-53 3xl:px-100 mt-8
                          md:mt-16 lg:mt-36 jacques-francois leading-snug md:leading-6 lg:leading-8 3xl:leading-10">
             We are both so delighted that you are able to join us in celebrating what
@@ -354,8 +354,8 @@ export default function Home() {
             everyone most sincerely for their kindness.We are looking forward to see
             you at the wedding.
           </h2>
-        <div className="relative flex flex-col items-center mt-14 md:mt-16 lg:mt-20 3xl:mt-40">
-          <img src="/assets/couple_one.webp" alt="couple_one" className=" absolute lg:top-0 w-30 h-20 md:w-47 md:h-37 lg:w-108 lg:h-76 3xl:w-130 3xl:h-88 z-10" />
+        <div className="relative flex flex-col items-center mt-14 md:mt-16 lg:mt-20 3xl:mt-50">
+          <img src="/assets/couple_one.webp" alt="couple_one" className=" absolute lg:top-0 w-30 h-20 md:w-47 md:h-37 lg:w-108 lg:h-76 3xl:w-120 3xl:h-88 z-10" />
           <div className="flex flex-col ">
           <h2 className="flex flex-col items-center text-center text-xl md:text-4xl lg:text-[68px] ml-60 md:ml-100 lg:ml-210 3xl:ml-230 md:mt-2 3xl:mt-6">
           <span className="text-[#F2AD15] jacques-francois">SAMPATH</span>
@@ -364,11 +364,11 @@ export default function Home() {
           </h2>
           </div>
           <img src="/assets/couple_two.webp" alt="couple_two" className="absolute top-15 left-12 w-28 h-38 md:top-25 md:left-35 md:w-50 md:h-65 
-                    lg:top-50 lg:left-50 lg:w-108 lg:h-126 3xl:top-60 3xl:left-70 3xl:w-130 3xl:h-140 z-0" />
-          <img src="/assets/flowers.webp" alt="flowers" className=" w-24 h-30 md:w-40 md:h-46 lg:w-58 lg:h-96 3xl:w-70 3xl:h-108 z-40" />
+                    lg:top-50 lg:left-50 lg:w-108 lg:h-126 3xl:top-60 3xl:left-80 3xl:w-120 3xl:h-180 z-0" />
+          <img src="/assets/flowers.webp" alt="flowers" className=" w-24 h-30 md:w-40 md:h-46 lg:w-58 lg:h-96 3xl:w-90 3xl:h-118 3xl:mt-10 z-40" />
           <img src="/assets/couple_three.webp" alt="couple_three" className="absolute top-15 right-12 w-28 h-44 md:top-25 md:right-40 md:w-50 md:h-75 
-                    lg:top-55 lg:right-50 lg:w-108 lg:h-146 3xl:top-60 3xl:right-70 3xl:w-130 3xl:h-160 z-20" />
-          <img src="/assets/couple_four.webp" alt="couple_four" className="mt-4 w-30 h-20 md:w-60 md:h-40 lg:w-123 lg:h-96 lg:mt-8 3xl:mt-10 3xl:w-145 3xl:h-108 z-10" />
+                    lg:top-55 lg:right-50 lg:w-108 lg:h-146 3xl:top-60 3xl:right-70 3xl:w-130 3xl:h-200 z-20" />
+          <img src="/assets/couple_four.webp" alt="couple_four" className="mt-4 w-30 h-20 md:w-60 md:h-40 lg:w-123 lg:h-96 lg:mt-8 3xl:mt-20 3xl:w-135 3xl:h-108 z-10" />
         </div>
         <div className="lg:mt-50">
            <h1 className=" text-3xl md:text-6xl lg:text-[122px] text-center text-[#FFFFFF] md:pt-29 lg:pt-32 pt-22 jacques-francois">
@@ -379,8 +379,8 @@ export default function Home() {
             we've gathered a few thoughtful details we'd love for you to know before
             the big day
           </h2>
-          <div className="flex justify-center mt-10 md:mt-14 lg:mt-20 3xl:mt-40 pb-10 md:pb-16 lg:pb-24 3xl:pb-40">
-            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-14 md:gap-14 lg:gap-30 3xl:gap-40">
+          <div className="flex justify-center mt-10 md:mt-14 lg:mt-20 3xl:mt-40 pb-10 md:pb-16 lg:pb-24 3xl:pb-34">
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-14 md:gap-14 lg:gap-30 3xl:gap-46">
               <div className="flex flex-col items-center justify-center text-center">
                 <img
                   src="/assets/weather.webp"
@@ -400,7 +400,7 @@ export default function Home() {
                 <img
                   src="/assets/staff.webp"
                   alt="drive"
-                  className="w-26 h-27 md:w-20 md:h-20 lg:w-21 lg:h-27 3xl:w-26 3xl:h-32"
+                  className="w-26 h-27 md:w-20 md:h-20 lg:w-21 lg:h-27 3xl:w-26 3xl:h-31"
                 />
                 <h2 className="text-2xl md:text-3xl lg:text-[42px] text-[#FFFFFF] mt-2 jacques-francois">
                   Staff
@@ -415,7 +415,7 @@ export default function Home() {
                 <img
                   src="/assets/parking.webp"
                   alt="car"
-                  className="w-30 h-27 md:w-25 md:h-20 lg:w-30 lg:h-27 3xl:w-36 3xl:h-32"
+                  className="w-30 h-27 md:w-25 md:h-20 lg:w-30 lg:h-27 3xl:w-34 3xl:h-31"
                 />
                 <h2 className="text-2xl md:text-3xl lg:text-[42px] text-[#FFFFFF] mt-2 jacques-francois">
                   Parking
@@ -431,7 +431,7 @@ export default function Home() {
          {/*  */}
         </div>
         <div className="lg:mt-20 3xl:mt-40">
-            <h2 className="text-center cormorant-upright text-2xl md:text-3xl lg:text-[64px] 3xl:text-7xl text-[#FFFFFF] md:pt-40 lg:pt-63 3xl:pt-140
+            <h2 className="text-center cormorant-upright text-2xl md:text-3xl lg:text-[64px] 3xl:text-7xl text-[#FFFFFF] md:pt-40 lg:pt-63 3xl:pt-80
                            pt-10 leading-6 md:leading-10 lg:leading-20 pr-30 md:pr-80 lg:pr-170">
               Looking forward to <br /> seeing you
             </h2>
@@ -450,13 +450,13 @@ export default function Home() {
       </section>
        {/* Fourth section */}
        <section className="bg-[url('/assets/background_fourth.webp')] bg-cover bg-no-repeat">
-        <div className="h-87 md:h-182 lg:h-338 3xl:h-429 flex justify-center">
+        <div className="h-86 md:h-182 lg:h-338 3xl:h-426 flex justify-center">
           <img src="/assets/couple_name.webp" alt="couple_name" className="mt-6 w-30 h-15 md:mt-15 md:w-50 md:h-25 lg:mt-30 lg:w-80 lg:h-40 3xl:mt-40 3xl:w-100 3xl:h-50" />
         </div>
        </section>
 
        {/* Fifth section */}
-       <section className="bg-[url('/assets/background_fifth.webp')] bg-cover bg-no-repeat">
+       {/* <section className="bg-[url('/assets/background_fifth.webp')] bg-cover bg-no-repeat">
         <div className="flex flex-col items-center h-39 md:h-83 lg:h-150 3xl:h-195 gap-2 md:gap-4 lg:gap-6 3xl:gap-14">
          <h2 className="jacques-francois text-[#FFFFFF] text-center text-xl md:text-3xl lg:text-[52px] pt-0 md:pt-12 lg:pt-32 3xl:pt-40">The countdown begins <br /> 14D 12H 28M</h2>
          <p className="jacques-francois text-[#FFFFFF] text-center text-xs md:text-xl lg:text-[32px] px-3 md:px-25 lg:px-70 3xl:px-110">
@@ -470,10 +470,10 @@ export default function Home() {
           © Invite Arc 2026
          </p>
         </div>
-       </section>
+       </section> */}
       
 
-      {/* <MarriageCountdown /> */}
+      <MarriageCountdown />
       <div className="fixed top-5 left-5 z-50">
         <a href="https://invitearc.com/">
           <button className="flex items-center gap-3 border-white border-2 bg-white/0 backdrop-blur text-white px-6 py-3 rounded-full shadow-lg cursor-pointer">
