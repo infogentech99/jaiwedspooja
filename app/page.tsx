@@ -289,7 +289,7 @@ export default function Home() {
           </div>
 
           <div className="flex justify-center mt-20 lg:pt-0 pb-80 3xl:pb-120">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-28 3xl:gap-36 ">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 lg:gap-28 3xl:gap-46 ">
               {events.map((event, i) => (
                 <div key={i} className="flex flex-col items-center text-center">
                   <img
@@ -343,7 +343,7 @@ export default function Home() {
       {/* Third section */}
       <section className="bg-[url('/assets/respo_third.webp')] md:bg-[url('/assets/background_third.webp')] bg-cover bg-no-repeat bg-top md:bg-center w-full overflow-hidden">
       
-       <div className="h-454 md:h-516 lg:h-957 3xl:h-1192">
+       <div className="h-454 md:h-516 lg:h-957 3xl:h-1182">
         <h1 className="text-xl md:text-2xl lg:text-[36px] text-center text-[#FFFFFF] pt-14 md:pt-22 lg:pt-40 3xl:pt-55 jacques-francois">A message from the couple</h1>
           <h2 className="text-xs md:text-xl lg:text-[32px] text-center text-[#FFFFFF] px-8 md:px-16 lg:px-53 3xl:px-100 mt-8
                          md:mt-16 lg:mt-36 jacques-francois leading-snug md:leading-6 lg:leading-8 3xl:leading-10">
@@ -364,11 +364,11 @@ export default function Home() {
           </h2>
           </div>
           <img src="/assets/couple_two.webp" alt="couple_two" className="absolute top-15 left-12 w-28 h-38 md:top-25 md:left-35 md:w-50 md:h-65 
-                    lg:top-50 lg:left-50 lg:w-108 lg:h-126 3xl:top-60 3xl:left-80 3xl:w-120 3xl:h-180 z-0" />
-          <img src="/assets/flowers.webp" alt="flowers" className=" w-24 h-30 md:w-40 md:h-46 lg:w-58 lg:h-96 3xl:w-90 3xl:h-118 3xl:mt-10 z-40" />
+                    lg:top-50 lg:left-50 lg:w-108 lg:h-126 3xl:top-60 3xl:left-70 3xl:w-130 3xl:h-180 z-0" />
+          <img src="/assets/flowers.webp" alt="flowers" className=" w-24 h-30 md:w-40 md:h-46 lg:w-58 lg:h-96 3xl:w-90 3xl:h-118 3xl:mt-7 3xl:ml-26 z-40" />
           <img src="/assets/couple_three.webp" alt="couple_three" className="absolute top-15 right-12 w-28 h-44 md:top-25 md:right-40 md:w-50 md:h-75 
-                    lg:top-55 lg:right-50 lg:w-108 lg:h-146 3xl:top-60 3xl:right-70 3xl:w-130 3xl:h-200 z-20" />
-          <img src="/assets/couple_four.webp" alt="couple_four" className="mt-4 w-30 h-20 md:w-60 md:h-40 lg:w-123 lg:h-96 lg:mt-8 3xl:mt-20 3xl:w-135 3xl:h-108 z-10" />
+                    lg:top-55 lg:right-50 lg:w-108 lg:h-146 3xl:top-60 3xl:right-65 3xl:w-140 3xl:h-200 z-20" />
+          <img src="/assets/couple_four.webp" alt="couple_four" className="mt-4 w-30 h-20 md:w-60 md:h-40 lg:w-123 lg:h-96 lg:mt-8 3xl:mt-20 3xl:w-140 3xl:h-108 3xl:mr-15 z-10" />
         </div>
         <div className="lg:mt-50">
            <h1 className=" text-3xl md:text-6xl lg:text-[122px] text-center text-[#FFFFFF] md:pt-29 lg:pt-32 pt-22 jacques-francois">
@@ -451,7 +451,7 @@ export default function Home() {
        {/* Fourth section */}
        <section className="bg-[url('/assets/background_fourth.webp')] bg-cover bg-no-repeat">
         <div className="h-86 md:h-182 lg:h-338 3xl:h-426 flex justify-center">
-          <img src="/assets/couple_name.webp" alt="couple_name" className="mt-6 w-30 h-15 md:mt-15 md:w-50 md:h-25 lg:mt-30 lg:w-80 lg:h-40 3xl:mt-40 3xl:w-100 3xl:h-50" />
+          <img src="/assets/couple_name.webp" alt="couple_name" className="mt-6 w-30 h-15 md:mt-15 md:w-50 md:h-25 lg:mt-30 lg:w-80 lg:h-40 3xl:mt-40 3xl:w-105 3xl:h-60" />
         </div>
        </section>
 
