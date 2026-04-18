@@ -246,12 +246,12 @@ export default function Home() {
             <img src="/assets/ganesh.webp" alt="ganesh" className="w-30 h-39 md:w-40 md:h-50 lg:w-50 lg:h-65 
                       object-cover"/>
 
-            <h2 className="text-[#FFFFFF] lg:text-[26px] md:text-xl text-xs jacques-francois ">
+            <h2 className="text-[#FFFFFF] lg:text-[26px] md:text-xl text-sm jacques-francois ">
               With the heavenly blessings of <br /> Shri Rajesh Kulkarni & Shrimati Sunita Kulkarni
             </h2>
 
             <hr className="w-16 lg:w-24 border-[#FFFFFF] lg:my-6" />
-            <h2 className="text-[#FFFFFF] lg:text-[26px] md:text-xl text-xs jacques-francois">
+            <h2 className="text-[#FFFFFF] lg:text-[26px] md:text-xl text-sm jacques-francois">
               Shri Amit Deshmukh & Shrimati Vaishali Deshmukh
             </h2>
           </div>
@@ -263,7 +263,7 @@ export default function Home() {
               INVITE
             </h2>
 
-            <p className="text-[#FFFFFF] jacques-francois lg:text-[26px] md:text-xl text-xs mt-6">
+            <p className="text-[#FFFFFF] jacques-francois lg:text-[26px] md:text-xl text-sm mt-6">
               You to join us in the wedding celebrations of
             </p>
 
@@ -279,11 +279,11 @@ export default function Home() {
               SAYALI
             </h2>
 
-            <p className="text-[#FFFFFF] jacques-francois text-xs md:text-xl lg:text-[26px] mt-6">
+            <p className="text-[#FFFFFF] jacques-francois text-sm md:text-xl lg:text-[26px] mt-6">
               Daughter of <br /> Shri Mahesh Joshi & Shrimati Asha Joshi
             </p>
 
-            <p className="text-[#FFFFFF] jacques-francois text-base md:text-xl lg:text-[26px] mt-8">
+            <p className="text-[#FFFFFF] jacques-francois text-sm md:text-xl lg:text-[26px] mt-8">
               On the following events
             </p>
           </div>
@@ -432,7 +432,7 @@ export default function Home() {
         </div>
         <div className="lg:mt-20 3xl:mt-40">
             <h2 className="text-center cormorant-upright text-2xl md:text-3xl lg:text-[64px] 3xl:text-7xl text-[#FFFFFF] md:pt-40 lg:pt-63 3xl:pt-80
-                           pt-10 leading-6 md:leading-10 lg:leading-20 pr-30 md:pr-80 lg:pr-170">
+                           pt-14 leading-6 md:leading-10 lg:leading-20 pr-30 md:pr-80 lg:pr-170">
               Looking forward to <br /> seeing you
             </h2>
             <div className="flex flex-col-1 md:gap-0 gap-0 lg:gap-0 justify-center items-center md:not-first:mt-4 pr-25 md:pr-70 lg:mr-90">
