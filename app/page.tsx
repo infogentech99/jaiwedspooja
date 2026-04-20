@@ -1,43 +1,7 @@
 "use client";
 import { useEffect, useState, useRef, useMemo } from "react";
-// import FallingLamps from "@/app/components/FallingLamps";
-// import CoupleMessage from "@/app/components/CoupleMessage";
 import MarriageCountdown from "@/app/components/MarriageCountdown";
-
-const FloatingLamp = ({ className, style, reverse = false }: { className: string; style?: React.CSSProperties; reverse?: boolean }) => {
-  // Memoize random values to prevent recalculation on re-renders
-  const lampValues = useMemo(() => {
-    // const duration = 60 + Math.random() * 40; // 60–100s (very slow flow)
-    // const duration = 40 + Math.random() * 10; // 40–50s
-    const duration = 60 + Math.random() * 10; // 60–70s
-    const delay = Math.random() * 15;
-
-    // depth feel - dramatic size variety
-    const scale = Math.random() < 0.5
-      ? 0.3 + Math.random() * 0.4  // 0.3–0.7 (small lamps)
-      : 1.2 + Math.random() * 0.8; // 1.2–2.0 (large lamps)
-    const blur = scale < 0.7 ? "blur(1.5px)" : "blur(0px)";
-
-    return { duration, delay, scale, blur };
-  }, []); // Empty dependency array means these values are calculated only once
-
-  return (
-    <img
-      src="/lamp.png"
-      alt="Lamp"
-      className={`floating-lamp ${className}`}
-      style={{
-        animationName: reverse ? 'lampFlowReverse' : 'lampFlow',
-        animationDuration: `${lampValues.duration}s`,
-        animationDelay: `${lampValues.delay}s`,
-        transform: `scale(${lampValues.scale})`,
-        filter: `drop-shadow(0 0 18px rgba(255,180,90,0.9)) ${lampValues.blur}`,
-        '--scale': lampValues.scale,
-        ...style,
-      } as React.CSSProperties}
-    />
-  );
-};
+import RoseHeroTemp from "@/app/components/RoseHeroTemp";
 
 export default function Home() {
   const events = [
@@ -46,7 +10,6 @@ export default function Home() {
       image: "/assets/mehendi.webp",
       date: "Tuesday, September 10th 2026",
       venue: "Hyatt Regency Delhi",
-      // venue_address: <>Friday, March 9th 2026 <br /> Taj Exotica Resort, Goa <br /> 9pm Onwards</>,
       time: "7:00 pm onwards",
       link: "https://maps.app.goo.gl/53z68ksx4cYgoNm59",
     },
@@ -56,7 +19,6 @@ export default function Home() {
       image: "/assets/haldi.webp",
       date: "Friday, September 13th 2026",
       venue: "Golden Gate Banquet",
-      // venue_address: <>Friday, March 9th 2026 <br /> Taj Exotica Resort, Goa <br /> 9pm Onwards</>,
       time: "4:00pm Onwards",
       link: "https://maps.app.goo.gl/ywMPWwHjbXvqwiWc8",
     },
@@ -65,7 +27,6 @@ export default function Home() {
       image: "/assets/kelvan.webp",
       date: "Sunday, September 15th 2026",
       venue: "The Ashok Hotel",
-      // venue_address: <>Friday, March 9th 2026 <br /> JW Mariott, Mussoorie <br /> 6pm Onwards</>,
       time: "8pm Onwards",
       link: "https://maps.app.goo.gl/f599YkTSEYKDEK5L7",
     },
@@ -75,7 +36,6 @@ export default function Home() {
       image: "/assets/sakhar_puda.webp",
       date: "Tuesday, September 10th 2026",
       venue: "Hyatt Regency Delhi",
-      // venue_address: <>Friday, March 9th 2026 <br /> Taj Exotica Resort, Goa <br /> 9pm Onwards</>,
       time: "7:00 pm onwards",
       link: "https://maps.app.goo.gl/53z68ksx4cYgoNm59",
     },
@@ -85,7 +45,6 @@ export default function Home() {
       image: "/assets/shaadi.webp",
       date: "Friday, September 13th 2026",
       venue: "The Leela Palace",
-      // venue_address: <>Friday, March 9th 2026 <br /> Taj Exotica Resort, Goa <br /> 9pm Onwards</>,
       time: "4:00pm Onwards",
       link: "https://maps.app.goo.gl/mxcwCxWhH1TXBC8c9",
     },
@@ -96,7 +55,6 @@ export default function Home() {
       image: "/assets/reception.webp",
       date: "Sunday, September 15th 2026",
       venue: "The Ashok Hotel",
-      // venue_address: <>Friday, March 9th 2026 <br /> Taj Exotica Resort, Goa <br /> 9pm Onwards</>,
       time: "8pm Onwards",
       link: "https://maps.app.goo.gl/f599YkTSEYKDEK5L7",
     },
@@ -159,75 +117,13 @@ export default function Home() {
       </button>
 
       <audio ref={audioRef} src="/assets/Marathi_song.mp3" loop preload="auto" playsInline />
-
+     
 
       {/* Hero section */}
       <div className="relative bg-[url('/assets/respo_bg.webp')] md:bg-[url('/assets/background.webp')] bg-cover bg-no-repeat bg-top
                        md:bg-center w-full overflow-hidden">
 
-        {/* Decorative Lamps - Natural Flow Pattern */}
-        {/* Left-to-Right Lamps - Less crowded */}
-        {/* <FloatingLamp className="absolute top-10 left-8 w-40 h-40 transform rotate-12 opacity-90" />
-        <FloatingLamp className="absolute top-30 left-20 w-36 h-36 transform rotate-45 opacity-80" />
-        <FloatingLamp className="absolute top-50 left-40 w-32 h-32 transform rotate-30 opacity-85" />
-        <FloatingLamp className="absolute top-70 left-60 w-38 h-38 transform rotate-15 opacity-80" />
-        <FloatingLamp className="absolute top-90 left-80 w-34 h-34 transform rotate-25 opacity-75" />
-        <FloatingLamp className="absolute top-110 left-100 w-28 h-28 transform rotate-10 opacity-85" />
-        <FloatingLamp className="absolute top-130 left-120 w-36 h-36 transform rotate-35 opacity-75" />
-        <FloatingLamp className="absolute top-150 left-140 w-30 h-30 transform rotate-22 opacity-85" />
-        <FloatingLamp className="absolute top-170 left-160 w-32 h-32 transform rotate-18 opacity-80" />
-        <FloatingLamp className="absolute top-190 left-180 w-40 h-40 transform rotate-28 opacity-85" />
-
-
-        <FloatingLamp className="hidden lg:block absolute top-50 left-40 w-40 h-40 transform rotate-30 opacity-85" />
-        <FloatingLamp className="hidden lg:block absolute top-60 left-40 w-40 h-40 transform rotate-15 opacity-80" />
-        <FloatingLamp className="hidden lg:block absolute top-80 left-80 w-40 h-40 transform rotate-25 opacity-75" />
-        <FloatingLamp className="hidden lg:block absolute top-100 left-100 w-40 h-40 transform rotate-10 opacity-85" />
-        <FloatingLamp className="hidden lg:block absolute top-120 left-120 w-32 h-32 transform rotate-35 opacity-75" />
-        <FloatingLamp className="hidden lg:block absolute top-140 left-140 w-40 h-40 transform rotate-22 opacity-85" />
-        <FloatingLamp className="hidden lg:block absolute top-160 left-160 w-32 h-32 transform rotate-18 opacity-80" />
-        <FloatingLamp className="hidden lg:block absolute top-180 left-180 w-40 h-40 transform rotate-28 opacity-85" />
-
-        <FloatingLamp className="hidden lg:block absolute top-50 left-40 w-40 h-40 transform rotate-30 opacity-85" />
-        <FloatingLamp className="hidden lg:block absolute top-60 left-40 w-40 h-40 transform rotate-15 opacity-80" />
-        <FloatingLamp className="hidden lg:block absolute top-80 left-80 w-40 h-40 transform rotate-25 opacity-75" /> */}
-
-
-
-
-
-        {/* Right-to-Left Lamps - Less crowded */}
-        {/* <FloatingLamp className="absolute top-20 right-12 w-32 h-32 transform -rotate-6 opacity-85" reverse={true} />
-        <FloatingLamp className="absolute top-40 right-32 w-28 h-28 transform -rotate-12 opacity-75" reverse={true} />
-        <FloatingLamp className="absolute top-60 right-52 w-36 h-36 transform -rotate-20 opacity-90" reverse={true} />
-        <FloatingLamp className="absolute top-80 right-72 w-30 h-30 transform -rotate-8 opacity-85" reverse={true} />
-        <FloatingLamp className="absolute top-100 right-92 w-34 h-34 transform -rotate-15 opacity-80" reverse={true} />
-        <FloatingLamp className="absolute top-120 right-112 w-38 h-38 transform -rotate-25 opacity-90" reverse={true} />
-        <FloatingLamp className="absolute top-140 right-132 w-26 h-26 transform -rotate-18 opacity-80" reverse={true} />
-        <FloatingLamp className="absolute top-160 right-152 w-32 h-32 transform -rotate-30 opacity-75" reverse={true} />
-        <FloatingLamp className="absolute top-180 right-172 w-36 h-36 transform -rotate-22 opacity-85" reverse={true} />
-        <FloatingLamp className="absolute top-200 right-192 w-30 h-30 transform -rotate-35 opacity-85" reverse={true} />
-
-
-        <FloatingLamp className="hidden lg:block absolute top-30 right-12 w-40 h-40 transform -rotate-6 opacity-85" reverse={true} />
-        <FloatingLamp className="hidden lg:block absolute top-50 right-32 w-40 h-40 transform -rotate-12 opacity-75" reverse={true} />
-        <FloatingLamp className="hidden lg:block absolute top-70 right-52 w-40 h-40 transform -rotate-20 opacity-90" reverse={true} />
-        <FloatingLamp className="hidden lg:block absolute top-90 right-72 w-40 h-40 transform -rotate-8 opacity-85" reverse={true} />
-        <FloatingLamp className="hidden lg:block absolute top-110 right-92 w-32 h-32 transform -rotate-15 opacity-80" reverse={true} />
-        <FloatingLamp className="hidden lg:block absolute top-130 right-112 w-40 h-40 transform -rotate-25 opacity-90" reverse={true} />
-        <FloatingLamp className="hidden lg:block absolute top-150 right-132 w-40 h-40 transform -rotate-18 opacity-80" reverse={true} />
-        <FloatingLamp className="hidden lg:block absolute top-170 right-152 w-32 h-32 transform -rotate-30 opacity-75" reverse={true} />
-        <FloatingLamp className="hidden lg:block absolute top-190 right-172 w-40 h-40 transform -rotate-22 opacity-85" reverse={true} />
-
-
-        <FloatingLamp className="hidden lg:block absolute top-150 right-132 w-40 h-40 transform -rotate-18 opacity-80" reverse={true} />
-        <FloatingLamp className="hidden lg:block absolute top-170 right-152 w-40 h-40 transform -rotate-30 opacity-75" reverse={true} />
-        <FloatingLamp className="hidden lg:block absolute top-190 right-172 w-40 h-40 transform -rotate-22 opacity-85" reverse={true} /> */}
-
-
-
-
-        {/* <FallingLamps /> */}
+     <RoseHeroTemp />
         <div className="pt-12 md:pt-34 lg:pt-64 relative z-10">
 
           <h2 className="text-[#FFFFFF]  text-center leading-tight text-3xl md:text-5xl lg:text-[64px] pb-110 md:pb-200 lg:pb-400
@@ -324,7 +220,7 @@ export default function Home() {
               ))}
             </div>
           </div>
-          
+
         </div>
       </div>
 
@@ -342,9 +238,9 @@ export default function Home() {
 
       {/* Third section */}
       <section className="bg-[url('/assets/respo_third.webp')] md:bg-[url('/assets/background_third.webp')] bg-cover bg-no-repeat bg-top md:bg-center w-full overflow-hidden">
-      
-       <div className="h-470 md:h-516 lg:h-957 3xl:h-1182">
-        <h1 className="text-xl md:text-2xl lg:text-[36px] text-center text-[#FFFFFF] pt-14 md:pt-22 lg:pt-40 3xl:pt-55 jacques-francois">A message from the couple</h1>
+
+        <div className="h-470 md:h-516 lg:h-957 3xl:h-1182">
+          <h1 className="text-xl md:text-2xl lg:text-[36px] text-center text-[#FFFFFF] pt-14 md:pt-22 lg:pt-40 3xl:pt-55 jacques-francois">A message from the couple</h1>
           <h2 className="text-xs md:text-xl lg:text-[32px] text-center text-[#FFFFFF] px-8 md:px-16 lg:px-53 3xl:px-100 mt-8
                          md:mt-16 lg:mt-36 jacques-francois leading-snug md:leading-6 lg:leading-8 3xl:leading-10">
             We are both so delighted that you are able to join us in celebrating what
@@ -354,83 +250,83 @@ export default function Home() {
             everyone most sincerely for their kindness.We are looking forward to see
             you at the wedding.
           </h2>
-        <div className="relative flex flex-col items-center mt-14 md:mt-16 lg:mt-20 3xl:mt-50">
-          <img src="/assets/couple_one.webp" alt="couple_one" className=" absolute lg:top-0 w-30 h-25 md:w-47 md:h-37 lg:w-108 lg:h-76 3xl:w-120 3xl:h-88 z-10" />
-          <div className="flex flex-col ">
-          <h2 className="flex flex-col items-center text-center text-xl md:text-4xl lg:text-[68px] ml-58 md:ml-100 lg:ml-210 3xl:ml-230 md:mt-2 3xl:mt-6">
-          <span className="text-[#F2AD15] jacques-francois">SAMPATH</span>
-          <span className="text-[#7CE670] opacity-50 text-5xl md:text-7xl lg:text-[150px] lavishly-yours-regular -my-5 md:-my-8 lg:-my-12 pr-8 md:pr-12 lg:pr-30">&</span>
-          <span className="text-[#F2AD15] jacques-francois pr-7 md:pr-12 lg:pr-22">SAYALI</span>
-          </h2>
-          </div>
-          <img src="/assets/couple_two.webp" alt="couple_two" className="absolute top-15 left-12 w-28 h-45 md:top-25 md:left-35 md:w-50 md:h-65 
+          <div className="relative flex flex-col items-center mt-14 md:mt-16 lg:mt-20 3xl:mt-50">
+            <img src="/assets/couple_one.webp" alt="couple_one" className=" absolute lg:top-0 w-30 h-25 md:w-47 md:h-37 lg:w-108 lg:h-76 3xl:w-120 3xl:h-88 z-10" />
+            <div className="flex flex-col ">
+              <h2 className="flex flex-col items-center text-center text-xl md:text-4xl lg:text-[68px] ml-58 md:ml-100 lg:ml-210 3xl:ml-230 md:mt-2 3xl:mt-6">
+                <span className="text-[#F2AD15] jacques-francois">SAMPATH</span>
+                <span className="text-[#7CE670] opacity-50 text-5xl md:text-7xl lg:text-[150px] lavishly-yours-regular -my-5 md:-my-8 lg:-my-12 pr-8 md:pr-12 lg:pr-30">&</span>
+                <span className="text-[#F2AD15] jacques-francois pr-7 md:pr-12 lg:pr-22">SAYALI</span>
+              </h2>
+            </div>
+            <img src="/assets/couple_two.webp" alt="couple_two" className="absolute top-15 left-12 w-28 h-45 md:top-25 md:left-35 md:w-50 md:h-65 
                     lg:top-50 lg:left-50 lg:w-108 lg:h-126 3xl:top-60 3xl:left-70 3xl:w-130 3xl:h-180 z-0" />
-          <img src="/assets/flowers.webp" alt="flowers" className="ml-2 mt-2 w-24 h-30 md:w-40 md:h-46 lg:w-58 lg:h-96 3xl:w-90 3xl:h-118 3xl:mt-7 3xl:ml-26 z-40" />
-          <img src="/assets/couple_three.webp" alt="couple_three" className="absolute top-17 right-12 w-28 h-48 md:top-25 md:right-40 md:w-50 md:h-75 
+            <img src="/assets/flowers.webp" alt="flowers" className="ml-2 mt-2 w-24 h-30 md:w-40 md:h-46 lg:w-58 lg:h-96 3xl:w-90 3xl:h-118 3xl:mt-7 3xl:ml-26 z-40" />
+            <img src="/assets/couple_three.webp" alt="couple_three" className="absolute top-17 right-12 w-28 h-48 md:top-25 md:right-40 md:w-50 md:h-75 
                     lg:top-55 lg:right-50 lg:w-108 lg:h-146 3xl:top-60 3xl:right-65 3xl:w-140 3xl:h-200 z-20" />
-          <img src="/assets/couple_four.webp" alt="couple_four" className="mt-2 w-33 h-25 md:w-60 md:h-40 lg:w-123 lg:h-96 lg:mt-8 3xl:mt-20 3xl:w-140 3xl:h-108 3xl:mr-15 z-10" />
-        </div>
-        <div className="lg:mt-50">
-           <h1 className=" text-3xl md:text-6xl lg:text-[122px] text-center text-[#FFFFFF] md:pt-29 lg:pt-32 pt-22 jacques-francois">
-            Things to <br /> know
-          </h1>
-          <h2 className="text-xs md:text-xl lg:text-[32px] text-center text-[#FFFFFF] md:pt-6 lg:pt-6 lg:px-60 3xl:px-110 px-6 md:px-30 mt-6 lg:mt-16 3xl:mt-24 jacques-francois">
-            To help you feel at ease and enjoy every moment of the celebrations,
-            we've gathered a few thoughtful details we'd love for you to know before
-            the big day
-          </h2>
-          <div className="flex justify-center mt-10 md:mt-14 lg:mt-20 3xl:mt-40 pb-10 md:pb-16 lg:pb-24 3xl:pb-34">
-            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-14 md:gap-14 lg:gap-30 3xl:gap-46">
-              <div className="flex flex-col items-center justify-center text-center">
-                <img
-                  src="/assets/weather.webp"
-                  alt="weather"
-                  className="w-30 h-26 md:w-25 md:h-20 lg:w-32 lg:h-27 3xl:w-36 3xl:h-31"
-                />
-                <h2 className="text-2xl md:text-3xl lg:text-[42px] text-[#FFFFFF] mt-2 jacques-francois">
-                  Weather
-                </h2>
-                <p className="text-xs lg:text-base text-[#FFFFFF] mt-1 jacques-francois md:leading-5">
-                  It will be mostly cloudy with <br />
-                  temperature reaching up <br />
-                  to 22 degrees at the venue
-                </p>
-              </div>
-              <div className="flex flex-col items-center justify-center text-center">
-                <img
-                  src="/assets/staff.webp"
-                  alt="drive"
-                  className="w-26 h-27 md:w-20 md:h-20 lg:w-21 lg:h-27 3xl:w-26 3xl:h-31"
-                />
-                <h2 className="text-2xl md:text-3xl lg:text-[42px] text-[#FFFFFF] mt-2 jacques-francois">
-                  Staff
-                </h2>
-                <p className="text-xs lg:text-base md:leading-5 text-[#FFFFFF] mt-1 jacques-francois">
-                  We recommend the nearby <br />
-                  lodge called VEGA near the <br />
-                  venue for the staff members
-                </p>
-              </div>
-              <div className="flex flex-col items-center justify-center text-center">
-                <img
-                  src="/assets/parking.webp"
-                  alt="car"
-                  className="w-30 h-27 md:w-25 md:h-20 lg:w-30 lg:h-27 3xl:w-34 3xl:h-31"
-                />
-                <h2 className="text-2xl md:text-3xl lg:text-[42px] text-[#FFFFFF] mt-2 jacques-francois">
-                  Parking
-                </h2>
-                <p className="text-[10px] lg:text-base md:leading-5 text-[#FFFFFF] mt-1 jacques-francois">
-                  Valet parking for all our <br />
-                  guests will be available <br />
-                  at the venue
-                </p>
+            <img src="/assets/couple_four.webp" alt="couple_four" className="mt-2 w-33 h-25 md:w-60 md:h-40 lg:w-123 lg:h-96 lg:mt-8 3xl:mt-20 3xl:w-140 3xl:h-108 3xl:mr-15 z-10" />
+          </div>
+          <div className="lg:mt-50">
+            <h1 className=" text-3xl md:text-6xl lg:text-[122px] text-center text-[#FFFFFF] md:pt-29 lg:pt-32 pt-22 jacques-francois">
+              Things to <br /> know
+            </h1>
+            <h2 className="text-xs md:text-xl lg:text-[32px] text-center text-[#FFFFFF] md:pt-6 lg:pt-6 lg:px-60 3xl:px-110 px-6 md:px-30 mt-6 lg:mt-16 3xl:mt-24 jacques-francois">
+              To help you feel at ease and enjoy every moment of the celebrations,
+              we've gathered a few thoughtful details we'd love for you to know before
+              the big day
+            </h2>
+            <div className="flex justify-center mt-10 md:mt-14 lg:mt-20 3xl:mt-40 pb-10 md:pb-16 lg:pb-24 3xl:pb-34">
+              <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-3 gap-14 md:gap-14 lg:gap-30 3xl:gap-46">
+                <div className="flex flex-col items-center justify-center text-center">
+                  <img
+                    src="/assets/weather.webp"
+                    alt="weather"
+                    className="w-30 h-26 md:w-25 md:h-20 lg:w-32 lg:h-27 3xl:w-36 3xl:h-31"
+                  />
+                  <h2 className="text-2xl md:text-3xl lg:text-[42px] text-[#FFFFFF] mt-2 jacques-francois">
+                    Weather
+                  </h2>
+                  <p className="text-xs lg:text-base text-[#FFFFFF] mt-1 jacques-francois md:leading-5">
+                    It will be mostly cloudy with <br />
+                    temperature reaching up <br />
+                    to 22 degrees at the venue
+                  </p>
+                </div>
+                <div className="flex flex-col items-center justify-center text-center">
+                  <img
+                    src="/assets/staff.webp"
+                    alt="drive"
+                    className="w-26 h-27 md:w-20 md:h-20 lg:w-21 lg:h-27 3xl:w-26 3xl:h-31"
+                  />
+                  <h2 className="text-2xl md:text-3xl lg:text-[42px] text-[#FFFFFF] mt-2 jacques-francois">
+                    Staff
+                  </h2>
+                  <p className="text-xs lg:text-base md:leading-5 text-[#FFFFFF] mt-1 jacques-francois">
+                    We recommend the nearby <br />
+                    lodge called VEGA near the <br />
+                    venue for the staff members
+                  </p>
+                </div>
+                <div className="flex flex-col items-center justify-center text-center">
+                  <img
+                    src="/assets/parking.webp"
+                    alt="car"
+                    className="w-30 h-27 md:w-25 md:h-20 lg:w-30 lg:h-27 3xl:w-34 3xl:h-31"
+                  />
+                  <h2 className="text-2xl md:text-3xl lg:text-[42px] text-[#FFFFFF] mt-2 jacques-francois">
+                    Parking
+                  </h2>
+                  <p className="text-[10px] lg:text-base md:leading-5 text-[#FFFFFF] mt-1 jacques-francois">
+                    Valet parking for all our <br />
+                    guests will be available <br />
+                    at the venue
+                  </p>
+                </div>
               </div>
             </div>
+            {/*  */}
           </div>
-         {/*  */}
-        </div>
-        <div className="lg:mt-20 3xl:mt-40">
+          <div className="lg:mt-20 3xl:mt-40">
             <h2 className="text-center cormorant-upright text-2xl md:text-3xl lg:text-[64px] 3xl:text-7xl text-[#FFFFFF] md:pt-40 lg:pt-63 3xl:pt-80
                            pt-14 leading-6 md:leading-10 lg:leading-20 pr-30 md:pr-80 lg:pr-170">
               Looking forward to <br /> seeing you
@@ -443,21 +339,21 @@ export default function Home() {
                 Click the Link to RSVP
               </h2>
             </div>
-            </div>
+          </div>
 
-       </div>
-       
+        </div>
+
       </section>
-       {/* Fourth section */}
-       <section className="bg-[url('/assets/background_fourth.webp')] bg-cover bg-no-repeat">
+      {/* Fourth section */}
+      <section className="bg-[url('/assets/background_fourth.webp')] bg-cover bg-no-repeat">
         <div className="h-96 md:h-182 lg:h-338 3xl:h-426 flex justify-center">
           <img src="/assets/couple_name.webp" alt="couple_name" className="mt-8 w-24 h-12 md:mt-15 md:w-50 md:h-25 lg:mt-30 lg:w-80 lg:h-40 3xl:mt-40 3xl:w-105 3xl:h-60" />
         </div>
-       </section>
+      </section>
 
-       {/* Fifth section */}
-       <MarriageCountdown />
-       
+      {/* Fifth section */}
+      <MarriageCountdown />
+
       {/* <div className="fixed top-5 left-5 z-50">
         <a href="https://invitearc.com/">
           <button className="flex items-center gap-3 border-white border-2 bg-white/0 backdrop-blur text-white px-6 py-3 rounded-full shadow-lg cursor-pointer">
