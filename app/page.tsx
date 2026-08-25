@@ -168,7 +168,7 @@ export default function Home() {
                     <span className="text-base md:text-base lg:text-[15px]">{event.date}</span>  <br />
                     <span className="text-base md:text-base lg:text-[15px]">  {event.time} </span> <br />
                     <span className="text-base md:text-base lg:text-[15px] uppercase"> {event.venue}</span><br/>
-                     <span className="text-base md:text-base lg:text-[15px] uppercase"> {event.venue_address}</span>
+                     <span className="text-base md:text-base lg:text-[15px]"> {event.venue_address}</span>
                   </p>
 
                   <a
