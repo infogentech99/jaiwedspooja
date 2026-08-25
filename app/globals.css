@@ -3,6 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Upright:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
 
 @import "tailwindcss";
 
@@ -48,6 +51,13 @@ body {
   font-family: "Lavishly Yours", cursive;
 }
 
+.parisienne-regular {
+  font-family: "Parisienne", cursive;
+}
+
+.eb-garamond {
+  font-family: "EB Garamond", serif;
+}
 
 .floating-petal{
   position:absolute;
