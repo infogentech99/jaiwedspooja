@@ -94,12 +94,12 @@ export default function Home() {
         <RoseHeroTemp />
         <div className="pt-12 md:pt-34 lg:pt-64 relative z-10">
 
-          <h2 className="text-[#FFFFFF] text-center leading-tight text-3xl md:text-5xl lg:text-[64px] pb-130 md:pb-220 lg:pb-400
+          <h2 className="text-[#FFFFFF] text-center leading-tight text-4xl md:text-5xl lg:text-[74px] pb-130 md:pb-220 lg:pb-400
                            3xl:pb-500 flex flex-col items-center gap-y-2 lg:gap-y-5">
 
             <span className="eb-garamond font-medium">JAY</span>
 
-            <span className="jacques-francois font-normal text-xl md:text-3xl lg:text-5xl tracking-widest">WEDS</span>
+            <span className="jacques-francois font-normal text-[14px] md:text-3xl lg:text-3xl tracking-widest">WEDS</span>
 
             <span className="eb-garamond font-medium">POOJA</span>
 
