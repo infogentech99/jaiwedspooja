@@ -258,7 +258,7 @@ export default function Home() {
                     Staff
                   </h2>
                   <p className="eb-garamond font-medium text-sm lg:text-xl md:leading-5 text-[#FFFFFF] mt-1">
-                    For those traveling from afar, <br /> Royal Orchid Suites offers a <br /> comfortable stay nearby.
+                    For guests traveling from out of <br /> town, comfortable accommodation is<br /> available nearby for a convenient and relaxing stay.
                   </p>
                 </div>
                 <hr className="hidden lg:block lg:rotate-90 lg:w-65 lg:border-2 border-[#FFFFFF] lg:my-28" />
