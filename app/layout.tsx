@@ -14,12 +14,12 @@ const geistMono = Geist_Mono({
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://jaiwedspooja.vercel.app/"),
+  metadataBase: new URL("https://jaywedspooja.vercel.app/"),
 
   openGraph: {
     title: "Jay & Pooja",
     description: "Join as they begin their forever. 4 September, 2026",
-    url: "https://jaiwedspooja.vercel.app/",
+    url: "https://jaywedspooja.vercel.app/",
     siteName: "InviteArc",
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
 
  other: {
-    "og:image:secure_url": "https://jaiwedspooja.vercel.app/og.jpg",
+    "og:image:secure_url": "https://jaywedspooja.vercel.app/og.jpg",
     "og:image:type": "image/jpg",
   },
 };
