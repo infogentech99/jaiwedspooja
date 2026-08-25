@@ -215,7 +215,7 @@ export default function Home() {
             <img src="/assets/couple_one.webp" alt="couple_one" className=" absolute lg:top-0 w-32 h-25 md:w-47 md:h-37 lg:w-108 lg:h-76 3xl:w-120 3xl:h-88 z-10" />
             <div className="flex flex-col ">
               <h2 className="flex flex-col items-center text-center text-xl md:text-4xl lg:text-[68px] ml-58 md:ml-92 lg:ml-192 3xl:ml-230 md:mt-2 3xl:mt-6">
-                <span className="eb-garamond font-medium text-[#F2AD15] pr-30">JAY</span>
+                <span className="eb-garamond font-medium text-[#F2AD15] md:pr-30">JAY</span>
                 <span className="eb-garamond font-medium text-[#7CE670] opacity-50 text-5xl md:text-7xl lg:text-[124px] -my-5 md:-my-8 lg:-my-12 pr-8 md:pr-12 lg:pr-30">&</span>
                 <span className="eb-garamond font-medium text-[#F2AD15] pr-6 md:pr-10 lg:pr-20">POOJA</span>
               </h2>
