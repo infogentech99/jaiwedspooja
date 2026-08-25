@@ -87,7 +87,6 @@ export default function Home() {
 
       <audio ref={audioRef} src="/assets/Marathi_song.mp3" loop preload="auto" playsInline />
 
-
       {/* Hero section */}
       <div className="bg-[url('/assets/respo_bg.webp')] lg:bg-[url('/assets/background.webp')]
                       bg-cover bg-top bg-no-repeat min-h-screen w-full relative overflow-hidden">
@@ -115,9 +114,7 @@ export default function Home() {
             </h2>
 
             <hr className="w-16 lg:w-24 border-[#FFFFFF] lg:my-6" />
-
           </div>
-
 
           <div className="mt-8 text-center">
             <h2 className="eb-garamond font-medium text-[#FFFFFF] text-3xl md:text-5xl lg:text-[64px] leading-tight lg:tracking-wide
